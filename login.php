@@ -17,7 +17,7 @@
             <h1>SIGN-IN</h1>
             <div class="daftar">
                 Belum punya akun?<br>
-                <a href="#">Daftar</a>
+                <a href="daftar.php">Daftar</a>
             </div><br>
             <hr>
 
