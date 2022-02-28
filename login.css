@@ -1,0 +1,58 @@
+body {
+    background: -webkit-linear-gradient(bottom,blue,rgb(0, 153, 255));
+    height: 541px;
+}
+.login {
+    margin-top:100px;
+    margin-left: 900px;
+    width: 350px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    background-color: white;
+
+}
+
+h1 {
+    position: absolute;
+    margin-left: 20px;
+}
+
+.daftar {
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.underline {
+    background: black;
+    height: 1px;
+    width: 350px;
+    margin-top: 10px;
+}
+#email,#password {
+    display: block;
+    margin-left: 20px;
+    padding: 0.7em;
+    width: 280px;
+}
+input:focus {
+    outline: 3px solid rgb(0, 153, 255);
+}
+
+#ingat {
+    margin-left: 20px;
+}
+
+.forget {
+    display: inline;
+    margin-left: 100px;
+}
+
+#masuk {
+    margin-left: 20px;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(0, 153, 255);
+}
