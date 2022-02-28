@@ -1,16 +1,40 @@
 body {
     background: -webkit-linear-gradient(bottom,blue,rgb(0, 153, 255));
-    height: 541px;
+    height: 633px;
 }
+img {
+    position: absolute;
+    margin-left: 18%;
+    width: 30%;
+    margin-top: 40px;
+}
+.p {
+    position:absolute;
+    color: white;
+    font-family: arial;
+    margin-top: 400px;
+    margin-left: 16%;
+    font-size: 30px;
+}
+
+.p2 {
+    position:absolute;
+    color: white;
+    font-family: arial;
+    margin-top: 450px;
+    margin-left: 25%;
+    font-size: 30px;
+}
+
 .login {
     margin-top:100px;
     margin-left: 900px;
     width: 350px;
     height: 400px;
-    border: 2px solid black;
     border-radius: 8px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
     background-color: white;
+    border: 2px solid black;
 
 }
 
@@ -55,4 +79,21 @@ input:focus {
     width: 300px;
     height: 30px;
     background-color: rgb(0, 153, 255);
+}
+
+#fb {
+    display: block;
+    margin-left: 20px;
+    width: 300px;
+    height: 30px;
+    color: white;
+    background-color: blue;
+}
+
+#google {
+    margin-left: 20px;
+    width: 300px;
+    height: 30px;
+    color: white;
+    background-color: red;
 }
