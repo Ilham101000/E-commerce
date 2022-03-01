@@ -19,8 +19,6 @@
                 Belum punya akun?<br>
                 <a href="daftar.php">Daftar</a>
             </div><br>
-            <hr>
-
             <input type="text" name="email" id="email" placeholder="Email/No.Handphone/Username"><br>
             <input type="password" name="password" id="password" placeholder="Password"> <br>
             <input type="checkbox" name="ingat" id="ingat" value="Ingat Saya">Ingat Saya
