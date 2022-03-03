@@ -8,25 +8,35 @@
     <title>Daftar</title>
 </head>
 <body>
+        <div class="logo">
+            <img src="gambar/bg putih2.png" alt="Logo LM">
+            <p class="name"><b>LM | REGISTRASI</b></p>
+        </div>
     <div class="container">
         <form action="" method="post">
+
+            <center><h3 class="REGISTRASI">REGISTRASI</h3></center>
             
-                <label for="nama">Masukan Nama Lengkap</label>
-                <input type="text" name="nama" id="nama">
-            
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email">        
-            
-                <label for="telp">No.Handphone</label>
-                <input type="text" name="telp" id="telp">
-            
-                <label for="pass1">Password</label>
-                <input type="password" name="pass1" id="pass1">
-            
-                <label for="pass2">Konfirmasi Password</label>
-                <input type="password" name="pass2" id="pass2"><br>
+                <input type="text" name="nama" id="nama" placeholder="Nama">            
+                <input type="email" name="email" id="email" placeholder="Email">                
+                <input type="text" name="telp" id="telp" placeholder="Nomor Telepon">
+                <input type="password" name="pass1" id="pass1" placeholder="Password">
+                <input type="password" name="pass2" id="pass2" placeholder="Konfirmasi Password">
         
                 <button type="submit" name="daftar" class="daftar">Daftar</button>
+                <hr>
+                    <a href="#"><input type="button" value="Facebook" id="fb"></a>
+                    <a href="#"><input type="button" value="Google" id="google"></a><br><br>
+                <center>
+                    <p class="p1">Dengan mendaftar, Anda setuju dengan</p>
+                    <p class="p2"> Syarat,Ketentuan dan Kebijakan dari LM</p>
+                    <p class="p3">&</p>
+                    <p class="p4">Kebijakan Privasi</p>
+                </center>
+
+                <div class="login">
+                    punya akun? <a href="login.php" class="link">Log in</a>
+                </div>
             </table>
         </form>
     </div>
