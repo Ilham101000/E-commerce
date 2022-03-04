@@ -1,3 +1,20 @@
+<?php
+    require 'function.php';
+
+    // mengecek apakah tombol daftar sudah di tekan atau belum
+    if (isset($_POST["daftar"]) ) {
+        
+        if ( register ($_POST) > 0) {
+            echo " <script>
+                    alert ('User baru berhasil ditambahkan!');
+                    document.location.href= 'login.php';
+                    </script>";
+        } else {
+            echo mysqli_error($conn);
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +34,11 @@
 
             <center><h3 class="REGISTRASI">REGISTRASI</h3></center>
             
-                <input type="text" name="nama" id="nama" placeholder="Nama">            
-                <input type="email" name="email" id="email" placeholder="Email">                
-                <input type="text" name="telp" id="telp" placeholder="Nomor Telepon">
-                <input type="password" name="pass1" id="pass1" placeholder="Password">
-                <input type="password" name="pass2" id="pass2" placeholder="Konfirmasi Password">
+                <input type="text" name="nama" id="nama" placeholder="Username" required>            
+                <input type="email" name="email" id="email" placeholder="Email" required>                
+                <input type="text" name="telp" id="telp" placeholder="Nomor Telepon" required>
+                <input type="password" name="pass1" id="pass1" placeholder="Password" required>
+                <input type="password" name="pass2" id="pass2" placeholder="Konfirmasi Password" required>
         
                 <button type="submit" name="daftar" class="daftar">Daftar</button>
                 <hr>

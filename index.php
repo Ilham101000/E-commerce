@@ -1,3 +1,15 @@
+<?php
+	session_start();
+
+	if(!isset($_SESSION["masuk"]) ) {
+		header("location:login.php");
+		exit;
+	}
+
+	require 'function.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +19,7 @@
     <title>Logam Mulia</title>
 </head>
 <body>
+<center><a href="logout.php"><input type="button" value="Logout"></a></center>
     
 </body>
 </html>

@@ -1,3 +1,61 @@
+<?php
+    session_start();
+    require 'function.php';
+
+     // cek cookie
+     if(isset($_COOKIE['id']) && isset ($_COOKIE['key']) ) {
+        $id = $_COOKIE['id'];
+        $key = $_COOKIE['key'];
+
+        // ambil username berdasarkan querynya 
+        $result = mysqli_query($conn,"SELECT nama FROM user WHERE id = $id");
+        $row = mysqli_fetch_assoc($result);
+
+        // cek cookie dan username
+        if($key === hash('sha256', $row['nama']) ) {
+            $_SESSION['masuk'] = true;
+        }
+    }
+
+	if( isset($_SESSION["masuk"]) ) {
+		header("location:index.php");
+		exit;
+	}
+
+    if (isset ($_POST["masuk"]) ) {
+        
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+
+        $result = mysqli_query($conn,"SELECT * FROM user
+                WHERE email = '$email' OR nama = '$email' OR telp = '$email' ");
+
+        //cek username
+        if ( mysqli_num_rows($result) === 1 ) {
+
+            // cek password
+            $row = mysqli_fetch_assoc($result);
+            if ( password_verify ($password,$row["password1"]) ) {
+                // ser session
+                $_SESSION ["masuk"] = true;
+
+                //cek remember me
+                if(isset($_POST['ingat']) ) {
+                    // buat cookie
+                    setcookie('id', $row['id'], time()+60);
+                    setcookie('key', hash('sha256', $row['nama']), time() + 60 );
+                }
+
+                header("location: index.php");
+                exit;
+            }
+        }
+
+        $error = true;
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +81,7 @@
             <input type="password" name="password" id="password" placeholder="Password"> <br>
             <input type="checkbox" name="ingat" id="ingat" value="Ingat Saya">Ingat Saya
             <a href="#" class="forget">Forget Password?</a> <br><br>
-            <a href="index.php"><input type="button" value="Masuk" id="masuk"></a><br>
+            <button type="submit" name="masuk" id="masuk">Masuk</button><br>
             <hr>
             <a href="#"><input type="button" value="Facebook" id="fb"></a><br>
             <a href="#"><input type="button" value="Google" id="google"></a>
