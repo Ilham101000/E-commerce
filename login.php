@@ -63,7 +63,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login/Daftar</title>
-    <link href="login.css" rel="stylesheet" type="text/css">
+    <link href="CSS/login.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     
@@ -80,7 +80,7 @@
             <input type="text" name="email" id="email" placeholder="Email/No.Handphone/Username"><br>
             <input type="password" name="password" id="password" placeholder="Password"> <br>
             <input type="checkbox" name="ingat" id="ingat" value="Ingat Saya">Ingat Saya
-            <a href="#" class="forget">Forget Password?</a> <br><br>
+            <a href="forget.php" class="forget">Forget Password?</a> <br><br>
             <button type="submit" name="masuk" id="masuk">Masuk</button><br>
             <hr>
             <a href="#"><input type="button" value="Facebook" id="fb"></a><br>

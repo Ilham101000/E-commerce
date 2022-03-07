@@ -21,7 +21,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="daftar.css">
+    <link rel="stylesheet" href="CSS/daftar.css">
     <title>Daftar</title>
 </head>
 <body>
@@ -36,7 +36,7 @@
             
                 <input type="text" name="nama" id="nama" placeholder="Username" required>            
                 <input type="email" name="email" id="email" placeholder="Email" required>                
-                <input type="text" name="telp" id="telp" placeholder="Nomor Telepon" required>
+                <input type="tel" name="telp" id="telp" placeholder="Nomor Telepon" required>
                 <input type="password" name="pass1" id="pass1" placeholder="Password" required>
                 <input type="password" name="pass2" id="pass2" placeholder="Konfirmasi Password" required>
         
